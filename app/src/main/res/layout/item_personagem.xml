@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_8">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivPersonagem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_150"
+            android:contentDescription="@string/personagem"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/rick_morty" />
+
+        <TextView
+            android:id="@+id/tvNomePersonagem"
+            android:textColor="@color/theme_color_secondary"
+            android:background="@color/theme_color_primary"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/nome_personagem"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ivPersonagem"
+            app:layout_constraintStart_toStartOf="@+id/ivPersonagem"
+            app:layout_constraintTop_toBottomOf="@id/ivPersonagem" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
