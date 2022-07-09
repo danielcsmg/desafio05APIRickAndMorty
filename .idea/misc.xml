@@ -5,8 +5,11 @@
       <map>
         <entry key="..\:/Users/daniel.souza/Documents/Desafio05/app/src/main/res/drawable/ic_favorite.xml" value="0.1415" />
         <entry key="..\:/Users/daniel.souza/Documents/Desafio05/app/src/main/res/drawable/ic_star.xml" value="0.1415" />
+        <entry key="..\:/Users/daniel.souza/Documents/Desafio05/app/src/main/res/layout/activity_detail_character.xml" value="0.1" />
+        <entry key="..\:/Users/daniel.souza/Documents/Desafio05/app/src/main/res/layout/activity_list_characters.xml" value="0.175" />
         <entry key="..\:/Users/daniel.souza/Documents/Desafio05/app/src/main/res/layout/activity_lista_personagens.xml" value="0.18" />
         <entry key="..\:/Users/daniel.souza/Documents/Desafio05/app/src/main/res/layout/activity_splash.xml" value="0.175" />
+        <entry key="..\:/Users/daniel.souza/Documents/Desafio05/app/src/main/res/layout/item_character.xml" value="0.175" />
         <entry key="..\:/Users/daniel.souza/Documents/Desafio05/app/src/main/res/layout/item_personagem.xml" value="0.33" />
       </map>
     </option>

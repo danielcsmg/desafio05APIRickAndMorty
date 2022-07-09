@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">Rick and Morty</string>
     <string name="imagem_rick_morty_splash">Imagem do Rick e Morty saindo de um portão em um planeta extraterrestre</string>
-    <string name="personagem">Personagem</string>
-    <string name="nome_personagem">nome personagem</string>
+    <string name="personagem">Personagem: %s</string>
+    <string name="nome_personagem">Nome do personagem: %s</string>
     <string name="botao_de_favoritos">Botão de favoritos</string>
+    <string name="imagem_do_personagem">Imagem do Personagem</string>
+    <string name="texto_teste">Texto teste</string>
+    <string name="genero_do_personagem">Gênero do personagem: %s</string>
+    <string name="especie_do_personagem">Espécie do Personagem: %s</string>
+    <string name="status_do_personagem">Status do personagem: %s</string>
+    <string name="nome_do_personagem">Nome do personagem: %s</string>
 </resources>

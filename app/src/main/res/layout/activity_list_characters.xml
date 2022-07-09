@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.listadepersonagens.view.ListaPersonagensActivity">
+    tools:context=".ui.listadepersonagens.view.ListCharactersActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPersonagens"
@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        tools:listitem="@layout/item_personagem"
+        tools:listitem="@layout/item_character"
         tools:spanCount="2" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

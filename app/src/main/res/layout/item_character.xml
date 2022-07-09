@@ -3,6 +3,7 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvPersonagem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/dimen_8">
@@ -24,12 +25,12 @@
 
         <TextView
             android:id="@+id/tvNomePersonagem"
-            android:textColor="@color/theme_color_secondary"
-            android:background="@color/theme_color_primary"
             android:layout_width="@dimen/dimen_0"
             android:layout_height="wrap_content"
+            android:background="@color/theme_color_primary"
             android:gravity="center_horizontal"
             android:text="@string/nome_personagem"
+            android:textColor="@color/theme_color_secondary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/ivPersonagem"
             app:layout_constraintStart_toStartOf="@+id/ivPersonagem"

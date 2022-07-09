@@ -3,9 +3,7 @@ package br.com.zup.desafiorickemorty.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class PersonagensResponse(
-    @SerializedName("info")
-    val info: Info,
+data class CharacterResponse(
     @SerializedName("results")
-    val results: List<PersonagemResult>
+    val characterList: List<CharacterResult>
 )
