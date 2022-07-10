@@ -1,8 +1,9 @@
 package br.com.zup.desafiorickemorty.ui.detailcharacter.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import br.com.zup.desafiorickemorty.R
@@ -10,8 +11,9 @@ import br.com.zup.desafiorickemorty.data.model.CharacterResult
 import br.com.zup.desafiorickemorty.databinding.ActivityDetailCharacterBinding
 import br.com.zup.desafiorickemorty.ui.BUNDLE
 import br.com.zup.desafiorickemorty.ui.CHARACTER_REM
+import br.com.zup.desafiorickemorty.ui.MESSAGE_SUCCESS_DISFAVOR
+import br.com.zup.desafiorickemorty.ui.MESSAGE_SUCCESS_FAVORITED
 import br.com.zup.desafiorickemorty.ui.detailcharacter.viewmodel.DetailCharacterViewModel
-import br.com.zup.desafiorickemorty.ui.listadepersonagens.viewmodel.ListCharactersViewModel
 import com.squareup.picasso.Picasso
 
 class DetailCharacterActivity : AppCompatActivity() {
@@ -30,8 +32,8 @@ class DetailCharacterActivity : AppCompatActivity() {
         val character = getCharacterDetail()
         character?.let {
             showCharacterDetail(it)
-            favoriteCharacter(character)
-            supportActionBar?.title = character.name
+            favoriteCharacter(it)
+            supportActionBar?.title = it.name
         }
         favoriteObserver(character)
         actioBar()
@@ -40,7 +42,16 @@ class DetailCharacterActivity : AppCompatActivity() {
     private fun favoriteCharacter(character: CharacterResult) {
         binding.ivFavorite.setOnClickListener{
             character.isFavorite = !character.isFavorite
+            messageFavoriteCharacter(character.isFavorite)
             updateCharacter(character)
+        }
+    }
+
+    private fun messageFavoriteCharacter(isFavorite: Boolean){
+        if(isFavorite){
+            Toast.makeText(this, MESSAGE_SUCCESS_FAVORITED, Toast.LENGTH_SHORT).show()
+        }else{
+            Toast.makeText(this, MESSAGE_SUCCESS_DISFAVOR, Toast.LENGTH_SHORT).show()
         }
     }
 

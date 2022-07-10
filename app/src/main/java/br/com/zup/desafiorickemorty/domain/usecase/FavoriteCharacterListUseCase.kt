@@ -8,8 +8,7 @@ import br.com.zup.desafiorickemorty.ui.MESSAGE_ERROR_LOAD_FAVORITE_CHARACTER
 import br.com.zup.desafiorickemorty.ui.viewstate.ViewState
 
 class FavoriteCharacterListUseCase(context: Context) {
-    private val characterDAO = CharacterDatabase.getDatabase(context).characterDao()
-    private val characterRepository = CharacterRepository(characterDAO)
+    private val characterRepository = CharacterRepository(context)
 
     suspend fun getFavoriteCharacters(): ViewState<List<CharacterResult>> {
         return try {

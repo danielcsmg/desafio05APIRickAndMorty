@@ -1,16 +1,19 @@
 package br.com.zup.desafiorickemorty.domain.repository
 
+import android.content.Context
+import br.com.zup.desafiorickemorty.data.datasource.local.CharacterDatabase
 import br.com.zup.desafiorickemorty.data.datasource.local.dao.CharacterDAO
 import br.com.zup.desafiorickemorty.data.datasource.remote.RetroftService
 import br.com.zup.desafiorickemorty.data.model.CharacterResponse
 import br.com.zup.desafiorickemorty.data.model.CharacterResult
 
-class CharacterRepository(private  val characterDAO: CharacterDAO) {
+class CharacterRepository(context: Context) {
+    private val characterDAO = CharacterDatabase.getDatabase(context).characterDao()
     suspend fun getAllCharacterNetwork(): CharacterResponse {
         return RetroftService.apiService.getInfoAPIRickAndMortyNetwork()
     }
 
-    suspend fun insertAllMoviesDB(listCharacters: List<CharacterResult>){
+    suspend fun insertAllCharactersDB(listCharacters: List<CharacterResult>){
         characterDAO.insertAllCharacters(listCharacters)
     }
 

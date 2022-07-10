@@ -7,7 +7,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import br.com.zup.desafiorickemorty.data.model.CharacterResult
 import br.com.zup.desafiorickemorty.domain.usecase.ListCharacterUseCase
-import br.com.zup.desafiorickemorty.ui.MESSAGE_ERROR_FAVORITE_CHARACTER_NETWORK
 import br.com.zup.desafiorickemorty.ui.MESSAGE_ERROR_LOAD_CHARACTER_NETWORK
 import br.com.zup.desafiorickemorty.ui.viewstate.ViewState
 import kotlinx.coroutines.Dispatchers
@@ -23,7 +22,7 @@ class ListCharactersViewModel(application: Application) : AndroidViewModel(appli
         viewModelScope.launch {
             try {
                 val response = withContext(Dispatchers.IO) {
-                    listCharactersUseCase.getAllCharacterNetwork()
+                    listCharactersUseCase.getAllCharacters()
                 }
                 _listCharactersState.value = response
             }catch (e: Exception){

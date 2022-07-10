@@ -6,3 +6,5 @@ const val MESSAGE_ERROR_LOAD_FAVORITE_CHARACTER = "Não foi possível carregar a
 const val CHARACTER_REM = "CHARACTER_REM"
 const val BUNDLE = "BUNDLE"
 const val FAVORITES = "Favoritos"
+const val MESSAGE_SUCCESS_FAVORITED = "O personagem foi favoritado com sucesso!"
+const val MESSAGE_SUCCESS_DISFAVOR = "Personagem desfavoritado!"

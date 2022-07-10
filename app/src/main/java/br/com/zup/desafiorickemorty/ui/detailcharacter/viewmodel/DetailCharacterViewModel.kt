@@ -18,7 +18,6 @@ class DetailCharacterViewModel(application: Application) : AndroidViewModel(appl
     private val _characterFavitedState = MutableLiveData<ViewState<CharacterResult>>()
     val characterFavoritedState: LiveData<ViewState<CharacterResult>> = _characterFavitedState
 
-
     fun updateCharacterFavorited(characterResult: CharacterResult){
         viewModelScope.launch {
             try {

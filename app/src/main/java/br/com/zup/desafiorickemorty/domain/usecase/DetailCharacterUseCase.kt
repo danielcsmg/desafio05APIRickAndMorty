@@ -7,8 +7,7 @@ import br.com.zup.desafiorickemorty.domain.repository.CharacterRepository
 import br.com.zup.desafiorickemorty.ui.viewstate.ViewState
 
 class DetailCharacterUseCase(application: Application) {
-    private val characterDao = CharacterDatabase.getDatabase(application).characterDao()
-    private val charactersRepository = CharacterRepository(characterDao)
+    private val charactersRepository = CharacterRepository(application)
 
     suspend fun updateCharacterFavorite(characterResult: CharacterResult): ViewState<CharacterResult> {
         return try {
