@@ -2,7 +2,6 @@ package br.com.zup.desafiorickemorty.ui.listadepersonagens.view
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
@@ -46,7 +45,7 @@ class ListCharactersActivity : AppCompatActivity() {
     }
 
     private fun initObserver(){
-        viewModel.listPersonagemState.observe(this){
+        viewModel.listCharactersState.observe(this){
             when(it){
                 is ViewState.Success -> {
                     adapter.updateListCharacters(it.data.toMutableList())

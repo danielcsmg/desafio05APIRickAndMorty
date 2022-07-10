@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.desafiorickemorty.data.model.CharacterResult
 import br.com.zup.desafiorickemorty.databinding.ItemCharacterBinding
-import br.com.zup.desafiorickemorty.ui.listadepersonagens.view.adapter.CharacterAdapter
 import com.squareup.picasso.Picasso
 
 class FavoriteCharacterAdapter(
@@ -22,7 +21,7 @@ class FavoriteCharacterAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val character = listCharacters[position]
         holder.showCharacterInfo(character)
-        holder.binding.cvPersonagem.setOnClickListener{
+        holder.binding.cvCharacter.setOnClickListener{
             clickDetail(character)
         }
     }
@@ -37,8 +36,8 @@ class FavoriteCharacterAdapter(
     class ViewHolder(val binding: ItemCharacterBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun showCharacterInfo(personagemResult: CharacterResult) {
-            Picasso.get().load(personagemResult.image).into(binding.ivPersonagem)
-            binding.tvNomePersonagem.text = personagemResult.name
+            Picasso.get().load(personagemResult.image).into(binding.ivCharacter)
+            binding.tvNameCharacter.text = personagemResult.name
         }
     }
 }

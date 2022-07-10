@@ -1,7 +1,6 @@
 package br.com.zup.desafiorickemorty.domain.usecase
 
 import android.app.Application
-import br.com.zup.desafiorickemorty.data.datasource.local.CharacterDatabase
 import br.com.zup.desafiorickemorty.data.model.CharacterResult
 import br.com.zup.desafiorickemorty.domain.repository.CharacterRepository
 import br.com.zup.desafiorickemorty.ui.viewstate.ViewState

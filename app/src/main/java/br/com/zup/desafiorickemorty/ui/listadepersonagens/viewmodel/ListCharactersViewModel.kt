@@ -16,7 +16,7 @@ import kotlinx.coroutines.withContext
 class ListCharactersViewModel(application: Application) : AndroidViewModel(application) {
     private val listCharactersUseCase = ListCharacterUseCase(application)
     private val _listCharactersState = MutableLiveData<ViewState<List<CharacterResult>>>()
-    val listPersonagemState: LiveData<ViewState<List<CharacterResult>>> = _listCharactersState
+    val listCharactersState: LiveData<ViewState<List<CharacterResult>>> = _listCharactersState
 
     fun getAllCharacters() {
         viewModelScope.launch {
