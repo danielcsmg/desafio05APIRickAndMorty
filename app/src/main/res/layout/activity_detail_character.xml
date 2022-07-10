@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color_primary"
+    tools:context=".ui.detailcharacter.view.DetailCharacterActivity">
+
+    <ImageView
+        android:id="@+id/ivImageCharacter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_250"
+        android:contentDescription="@string/imagem_do_personagem"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/rick_morty" />
+
+    <TextView
+        android:id="@+id/tvCharacterName"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:text="@string/nome_do_personagem"
+        android:textColor="@color/theme_color_secondary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivImageCharacter" />
+
+    <TextView
+        android:id="@+id/tvCharacterStatus"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:text="@string/status_do_personagem"
+        android:textColor="@color/theme_color_secondary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tvCharacterName"
+        app:layout_constraintStart_toStartOf="@id/tvCharacterName"
+        app:layout_constraintTop_toBottomOf="@id/tvCharacterName" />
+
+    <TextView
+        android:id="@+id/tvCharacterEspecie"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:text="@string/especie_do_personagem"
+        android:textColor="@color/theme_color_secondary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tvCharacterName"
+        app:layout_constraintStart_toStartOf="@id/tvCharacterName"
+        app:layout_constraintTop_toBottomOf="@id/tvCharacterStatus" />
+
+
+    <TextView
+        android:id="@+id/tvCharacterGender"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:text="@string/genero_do_personagem"
+        android:textColor="@color/theme_color_secondary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tvCharacterName"
+        app:layout_constraintStart_toStartOf="@id/tvCharacterName"
+        app:layout_constraintTop_toBottomOf="@id/tvCharacterEspecie" />
+
+    <ImageView
+        android:id="@+id/ivFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_favorited"
+        app:layout_constraintEnd_toEndOf="@+id/tvCharacterName"
+        app:layout_constraintTop_toTopOf="@+id/tvCharacterName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

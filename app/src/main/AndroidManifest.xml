@@ -9,12 +9,18 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_rem"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DesafioRickEMorty"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.favoritecharacter.view.FavoriteCharacterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.detailcharacter.view.DetailCharacterActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.splash.view.SplashActivity"
             android:exported="true"
@@ -26,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.listadepersonagens.view.ListaPersonagensActivity"
+            android:name=".ui.listadepersonagens.view.ListCharactersActivity"
             android:exported="false" />
     </application>
 

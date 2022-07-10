@@ -5,7 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.com.zup.desafiorickemorty.R
-import br.com.zup.desafiorickemorty.ui.listadepersonagens.view.ListaPersonagensActivity
+import br.com.zup.desafiorickemorty.ui.listadepersonagens.view.ListCharactersActivity
 import java.util.*
 
 private val timer = Timer()
@@ -27,7 +27,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun jump() {
         timer.cancel()
-        startActivity(Intent(this, ListaPersonagensActivity::class.java))
+        startActivity(Intent(this, ListCharactersActivity::class.java))
         this.finish()
     }
 }
