@@ -2,6 +2,7 @@ package br.com.zup.desafiorickemorty.ui.listadepersonagens.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
@@ -12,6 +13,7 @@ import br.com.zup.desafiorickemorty.databinding.ActivityListCharactersBinding
 import br.com.zup.desafiorickemorty.ui.BUNDLE
 import br.com.zup.desafiorickemorty.ui.CHARACTER_REM
 import br.com.zup.desafiorickemorty.ui.detailcharacter.view.DetailCharacterActivity
+import br.com.zup.desafiorickemorty.ui.favoritecharacter.view.FavoriteCharacterActivity
 import br.com.zup.desafiorickemorty.ui.listadepersonagens.view.adapter.CharacterAdapter
 import br.com.zup.desafiorickemorty.ui.listadepersonagens.viewmodel.ListCharactersViewModel
 import br.com.zup.desafiorickemorty.ui.viewstate.ViewState
@@ -35,6 +37,7 @@ class ListCharactersActivity : AppCompatActivity() {
         initObserver()
         viewModel.getAllCharacters()
         initRecyclerView()
+        redirectToFavoriteList()
     }
 
     private fun initRecyclerView(){
@@ -46,7 +49,7 @@ class ListCharactersActivity : AppCompatActivity() {
         viewModel.listPersonagemState.observe(this){
             when(it){
                 is ViewState.Success -> {
-                    adapter.apdateListCharacters(it.data as MutableList<CharacterResult>)
+                    adapter.updateListCharacters(it.data.toMutableList())
                 }
                 is ViewState.Error -> {
                     Toast.makeText(this, "${it.throwable.message}", Toast.LENGTH_SHORT).show()
@@ -56,10 +59,16 @@ class ListCharactersActivity : AppCompatActivity() {
     }
 
     private fun redirectToDetail(character: CharacterResult){
-        val bundle = bundleOf("CHARACTER_REM" to character)
+        val bundle = bundleOf(CHARACTER_REM to character)
         val intent = Intent(this, DetailCharacterActivity::class.java).apply {
-            putExtra("BUNDLE", bundle)
+            putExtra(BUNDLE, bundle)
         }
         startActivity(intent)
+    }
+
+    private fun redirectToFavoriteList(){
+        binding.fabFavoriteList.setOnClickListener {
+            startActivity(Intent(this, FavoriteCharacterActivity::class.java))
+        }
     }
 }

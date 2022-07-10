@@ -5,7 +5,6 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import java.util.concurrent.TimeUnit
 
 class RetroftService {
@@ -32,7 +31,7 @@ class RetroftService {
         }
 
         @JvmStatic
-        val apiService: PersonagemAPI
-        get() = retrofit.create(PersonagemAPI::class.java)
+        val apiService: CharacterAPI
+        get() = retrofit.create(CharacterAPI::class.java)
     }
 }

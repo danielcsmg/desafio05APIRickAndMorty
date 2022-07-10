@@ -16,6 +16,9 @@
         android:theme="@style/Theme.DesafioRickEMorty"
         tools:targetApi="31">
         <activity
+            android:name=".ui.favoritecharacter.view.FavoriteCharacterActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.detailcharacter.view.DetailCharacterActivity"
             android:exported="false" />
         <activity

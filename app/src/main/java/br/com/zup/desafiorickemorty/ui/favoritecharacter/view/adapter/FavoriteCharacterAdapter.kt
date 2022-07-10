@@ -1,16 +1,17 @@
-package br.com.zup.desafiorickemorty.ui.listadepersonagens.view.adapter
+package br.com.zup.desafiorickemorty.ui.favoritecharacter.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.desafiorickemorty.data.model.CharacterResult
 import br.com.zup.desafiorickemorty.databinding.ItemCharacterBinding
+import br.com.zup.desafiorickemorty.ui.listadepersonagens.view.adapter.CharacterAdapter
 import com.squareup.picasso.Picasso
 
-class CharacterAdapter(
+class FavoriteCharacterAdapter(
     private var listCharacters: MutableList<CharacterResult> = mutableListOf(),
     val clickDetail: (character: CharacterResult) -> Unit
-) : RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<FavoriteCharacterAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding =
