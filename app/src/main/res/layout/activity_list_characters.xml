@@ -27,7 +27,6 @@
         android:backgroundTint="@color/theme_color_primary"
         android:contentDescription="@string/botao_de_favoritos"
         app:srcCompat="@drawable/ic_favorited"
-        app:tint="@color/yellow"
         app:layout_constraintBottom_toBottomOf="@id/rvPersonagens"
         app:layout_constraintEnd_toEndOf="@id/rvPersonagens" />
 
