@@ -6,7 +6,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import br.com.zup.desafiorickemorty.R
 import br.com.zup.desafiorickemorty.data.model.CharacterResult
 import br.com.zup.desafiorickemorty.databinding.ActivityListCharactersBinding
 import br.com.zup.desafiorickemorty.ui.BUNDLE

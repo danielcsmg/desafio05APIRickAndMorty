@@ -9,6 +9,6 @@
     <string name="genero_do_personagem">Gênero: %s</string>
     <string name="especie_do_personagem">Espécie: %s</string>
     <string name="status_do_personagem">Status: %s</string>
-    <string name="nome_do_personagem">Nome do personagem: %s</string>
+    <string name="nome_do_personagem">Nome: %s</string>
     <string name="favoritar">Favoritar</string>
 </resources>
