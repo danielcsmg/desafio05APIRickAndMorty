@@ -11,7 +11,6 @@ import java.util.*
 private val timer = Timer()
 const val DELAY = 3000L
 
-@SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

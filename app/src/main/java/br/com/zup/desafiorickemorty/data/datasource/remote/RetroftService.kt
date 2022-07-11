@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit
 
 class RetroftService {
     companion object {
-        const val BASE_URL = "https://rickandmortyapi.com/api/"
+        private const val BASE_URL = "https://rickandmortyapi.com/api/"
 
         private val retrofit: Retrofit by lazy {
             val httpClient = OkHttpClient.Builder()
