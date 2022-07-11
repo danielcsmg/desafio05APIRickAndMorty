@@ -26,7 +26,8 @@
         android:layout_margin="@dimen/dimen_16"
         android:backgroundTint="@color/theme_color_primary"
         android:contentDescription="@string/botao_de_favoritos"
-        android:tint="@color/yellow"
+        app:tint="@color/white"
+        app:borderWidth="@dimen/dimen_0"
         app:srcCompat="@drawable/ic_favorited"
         app:layout_constraintBottom_toBottomOf="@id/rvPersonagens"
         app:layout_constraintEnd_toEndOf="@id/rvPersonagens" />
